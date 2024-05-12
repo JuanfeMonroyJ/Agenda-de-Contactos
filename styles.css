@@ -8,19 +8,25 @@
 
 html {
     font-family: "poppins", sans-serif;
-    font-size: 62.5%;
 }
 
 body {
-    background-color: rgba(0, 0, 0, .8);
+    background: linear-gradient(rgb(70, 12, 70), rgb(15, 15, 15));
     color: rgb(255, 255, 255);
+    height: 100vh;
 }
 
 .container {
-    height: 100vh;
-    width: 70vh;
+    width: 70%;
     margin: 2rem auto;
+    /* Ajusta el margen superior a -2rem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente */
+
 }
+
 
 .container h2 {
     text-transform: uppercase;
@@ -31,7 +37,8 @@ body {
 
 .formulario-datos {
     display: block;
-    width: 50%;
+    width: 100%;
+    max-width: 400px;
     margin: 1rem auto;
     display: flex;
     flex-direction: column;
@@ -40,30 +47,40 @@ body {
 .formulario-datos input {
     margin: 1rem 0rem;
     line-height: 3rem;
-    background: none;
-    outline: 0;
-    border: 0;
     color: white;
+    cursor: pointer;
+    background-color: rgb(48, 48, 48);
+
 }
 
 .formulario-datos input:active {
-    border-bottom: 1px solid dodgerblue;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .formulario-datos input:focus {
-    border-bottom: 1px solid dodgerblue;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .formulario-datos button {
     margin: 1rem 0rem;
-    background-color: dodgerblue;
+    background-color: rgb(48, 48, 48);
     border: 0;
     outline: 0;
     height: 3rem;
     border-radius: 5px;
     text-transform: uppercase;
     color: white;
+    cursor: pointer;
 }
+
+button:hover {
+    transform: scale(1.1);
+}
+
+input:hover {
+    transform: scale(1.1);
+}
+
 
 .listado-tareas {
     display: flex;
@@ -79,5 +96,5 @@ body {
 
 .icono {
     cursor: pointer;
-    color: red;
+    color: rgb(255, 255, 255);
 }
