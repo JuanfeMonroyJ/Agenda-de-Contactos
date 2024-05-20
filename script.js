@@ -9,11 +9,12 @@ const db = window.localStorage;
 
 btnAgregarTarea.onclick = () => {
   let contacto = {
-    id: Math.random(1, 100),
+    id: Math.random().toString(36).substring(2, 9),
     nombre: nombre.value,
     numero: numero.value,
     direccion: direccion.value,
   };
   guardarContacto(db, contacto);
 };
+
 cargarContactos(db, listadoTareas);

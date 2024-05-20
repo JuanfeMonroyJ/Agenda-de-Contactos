@@ -7,7 +7,7 @@
 }
 
 html {
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -19,14 +19,10 @@ body {
 .container {
     width: 70%;
     margin: 2rem auto;
-    /* Ajusta el margen superior a -2rem */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centra horizontalmente */
-
 }
-
 
 .container h2 {
     text-transform: uppercase;
@@ -36,7 +32,6 @@ body {
 }
 
 .formulario-datos {
-    display: block;
     width: 100%;
     max-width: 400px;
     margin: 1rem auto;
@@ -45,24 +40,20 @@ body {
 }
 
 .formulario-datos input {
-    margin: 1rem 0rem;
+    margin: 1rem 0;
     line-height: 3rem;
     color: white;
     cursor: pointer;
     background-color: rgb(48, 48, 48);
-
 }
 
-.formulario-datos input:active {
-    border-bottom: 1px solid rgb(255, 255, 255);
-}
-
+.formulario-datos input:active,
 .formulario-datos input:focus {
     border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .formulario-datos button {
-    margin: 1rem 0rem;
+    margin: 1rem 0;
     background-color: rgb(48, 48, 48);
     border: 0;
     outline: 0;
@@ -73,14 +64,10 @@ body {
     cursor: pointer;
 }
 
-button:hover {
-    transform: scale(1.1);
-}
-
+button:hover,
 input:hover {
     transform: scale(1.1);
 }
-
 
 .listado-tareas {
     display: flex;
@@ -92,6 +79,7 @@ input:hover {
     flex-direction: row;
     justify-content: space-between;
     height: 4rem;
+    margin-bottom: 1rem;
 }
 
 .icono {

@@ -1,10 +1,12 @@
 const guardarContacto = (db, contacto) => {
   db.setItem(contacto.id, JSON.stringify(contacto));
-  window.location.href = "/";
+  window.location.href = window.location.pathname;
 };
 
 const cargarContactos = (db, parentNode) => {
   const claves = Object.keys(db);
+
+  parentNode.innerHTML = ""; // Limpiar el contenedor antes de cargar contactos
 
   if (claves.length === 0) {
     mostrarMensaje(parentNode, "No has agregado ningún contacto");
@@ -40,7 +42,7 @@ const crearContacto = (parentNode, contacto, db) => {
   iconoBorrar.classList.add("material-symbols-outlined", "icono");
   iconoBorrar.onclick = () => {
     db.removeItem(contacto.id);
-    window.location.href = "/";
+    window.location.href = window.location.pathname;
   };
   divContacto.appendChild(iconoBorrar);
 
